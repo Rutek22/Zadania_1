@@ -10,7 +10,7 @@ int wybierzRuch() {
     printf("2. Papier\n");
     printf("3. Nozyce\n");
     printf("Wybierz swoj ruch [1, 2, 3]:");
-    scanf_s("%d", &ruch);          // Znak & aby zapisać wartość do zmiennej
+    scanf("%d", &ruch);          // Znak & aby zapisać wartość do zmiennej
     if (ruch >= 1 && ruch <= 3) {
         ruchUzytkownika = ruch;
     } else {

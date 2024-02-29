@@ -18,7 +18,7 @@ int main()
 {
     printf("Podaj liczbe: ");
     int liczba;
-    scanf_s("%d", &liczba);
+    scanf("%d", &liczba);
 
     int suma = 0;
     if (liczba > 0) {
