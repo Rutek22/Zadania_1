@@ -21,8 +21,8 @@ void funkcja(Student* studenci[], int rozmiar) {
 
 int main()
 {
-    char *imiona[] = {"Adam", "Ewa", "Kamil", "Julia", "Mateusz", "Anna", "Piotr", "Natalia", "Bartosz", "Kinga",
-                      "Kacper", "Zuzanna", "Maciej", "Wiktoria", "Jakub", "Magdalena", "Michal", "Oliwia", "Dominik", "Karolina"};
+    char *imiona[] = {"Krystian", "Hubert", "Wiktor", "Kacper", "Mateusz", "Jakub", "Piotr", "Ola", "Bartek", "Kinga",
+                      "Tomek", "Maciek", "Maciej", "Jan", "Marcin", "Magda", "Michal", "Oliwia", "Klaudia", "Karolina"};
 
     Student studenci[100];
 
