@@ -1,10 +1,9 @@
-#include <stdlib.h>
 #include <stdio.h>
 
 typedef struct {
     int x;
     int y;
-}Point;
+} Point;
 
 typedef struct {
     Point* p1;
@@ -13,47 +12,40 @@ typedef struct {
     Point* p4;
 }Rectangle;
 
-//Przesunięcie
-void move_point(Point* p) {
+void funkcja(Point* p) {
     p->x++;
     p->y++;
 }
 
-//Pole
-int rectangle_area(Rectangle r) {
-    int x = r.p3->x - r.p2->x;
-    int h = r.p4->y - r.p3->y;
+void funkcja2(Rectangle r1) {
+    int dlugoscAB = r1.p1->y - r1.p2->y;
+    int dlugoscBC = r1.p3->x - r1.p2->x;
+    int dlugoscCD = r1.p4->y - r1.p3->y;
+    int dlugoscDA = r1.p4->x - r1.p1->x;
 
-    return x * h;
-}
+    double obw = dlugoscAB + dlugoscBC + dlugoscCD + dlugoscDA;
+    double pole = dlugoscAB * dlugoscBC;
 
-//Obwód
-int rectangle_circuit(Rectangle r) {
-    int ab = r.p2->y - r.p1->y;
-    int ac = r.p3->x - r.p1->x;
-    int cd = r.p4->y - r.p3->y;
-    int bd = r.p4->x - r.p2->x;
-    return ab + ac + cd + bd;
+    printf("Obwod figury: %f\n", obw);
+    printf("Pole figury: %f\n", pole);
 }
 
 int main()
 {
-    Point p = { 1,4 };
-    printf("Przed: x=%d, y=%d\n", p.x, p.y);
-    move_point(&p);
-    printf("Po: x=%d, y=%d\n", p.x, p.y);
+    Point p1 = { 0, 4 };
+    Point p2 = { 0, 0 };
+    Point p3 = { 4, 0 };
+    Point p4 = { 4, 4 };
 
-    Point p1 = { 2, 2 };
-    Point p2 = { 2, 5 };
-    Point p3 = { 7, 2 };
-    Point p4 = { 7, 5 };
+    Rectangle r1 = { &p1, &p2, &p3, &p4 };
 
-    Rectangle r = { &p1, &p2, &p3, &p4 };
+    printf("Point p1: %d:%d\n", p1.x, p1.y);
 
-    printf("Punkty prostokata r: p1(%d, %d), p2(%d, %d), p3(%d, %d), p4(%d, %d)\n",
-           r.p1->x, r.p1->y, r.p2->x, r.p2->y, r.p3->x, r.p3->y, r.p4->x, r.p4->y);
-    printf("Pole: %d\n", rectangle_area(r));
-    printf("Obwod: %d\n", rectangle_circuit(r));
+    funkcja(&p1);
+
+    printf("Point p1 po uzyciu funkcji: %d:%d\n", p1.x, p1.y);
+
+    funkcja2(r1);
 
     return 0;
 }
