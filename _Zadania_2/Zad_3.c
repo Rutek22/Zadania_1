@@ -1,10 +1,10 @@
+#include <stdlib.h>
 #include <stdio.h>
-#include <math.h>
 
 typedef struct {
     int x;
     int y;
-} Point;
+}Point;
 
 typedef struct {
     Point* p1;
@@ -13,49 +13,47 @@ typedef struct {
     Point* p4;
 }Rectangle;
 
-void funkcja(Point* p) {
+//Przesunięcie
+void move_point(Point* p) {
     p->x++;
     p->y++;
 }
 
-void funkcja2(Rectangle r1) {
-    // Dlugosci odcinkow:
-    // Odcinek AB
-    double dlugoscAB = sqrt(pow((r1.p2->x - r1.p1->x),2) + pow((r1.p2->y - r1.p1->y), 2));
+//Pole
+int rectangle_area(Rectangle r) {
+    int x = r.p3->x - r.p2->x;
+    int h = r.p4->y - r.p3->y;
 
-    // Odcinek BC
-    double dlugoscBC = sqrt(pow((r1.p3->x - r1.p2->x), 2) + pow((r1.p3->y - r1.p2->y), 2));
+    return x * h;
+}
 
-    // Odcinek CD
-    double dlugoscCD = sqrt(pow((r1.p4->x - r1.p3->x), 2) + pow((r1.p4->y - r1.p3->y), 2));
-
-    // Odcinek DA
-    double dlugoscDA = sqrt(pow((r1.p1->x - r1.p4->x), 2) + pow((r1.p1->y - r1.p4->y), 2));
-
-    double obw = dlugoscAB + dlugoscBC + dlugoscCD + dlugoscDA;
-    double pole = dlugoscAB * dlugoscBC;
-
-    printf("Obwod figury: %f\n", obw);
-    printf("Pole figury: %f\n", pole);
+//Obwód
+int rectangle_circuit(Rectangle r) {
+    int ab = r.p2->y - r.p1->y;
+    int ac = r.p3->x - r.p1->x;
+    int cd = r.p4->y - r.p3->y;
+    int bd = r.p4->x - r.p2->x;
+    return ab + ac + cd + bd;
 }
 
 int main()
 {
-    Point p1 = { 0, 4 };
-    Point p2 = { 0, 0 };
-    Point p3 = { 4, 0 };
-    Point p4 = { 4, 4 };
+    Point p = { 1,4 };
+    printf("Przed: x=%d, y=%d\n", p.x, p.y);
+    move_point(&p);
+    printf("Po: x=%d, y=%d\n", p.x, p.y);
 
-    Rectangle r1 = { &p1, &p2, &p3, &p4 };
+    Point p1 = { 2, 2 };
+    Point p2 = { 2, 5 };
+    Point p3 = { 7, 2 };
+    Point p4 = { 7, 5 };
 
-    printf("Point p1: %d:%d\n", p1.x, p1.y);
+    Rectangle r = { &p1, &p2, &p3, &p4 };
 
-    funkcja(&p1);
-
-    printf("Point p1 po uzyciu funkcji: %d:%d\n", p1.x, p1.y);
-
-    funkcja2(r1);
-
+    printf("Punkty prostokata r: p1(%d, %d), p2(%d, %d), p3(%d, %d), p4(%d, %d)\n",
+           r.p1->x, r.p1->y, r.p2->x, r.p2->y, r.p3->x, r.p3->y, r.p4->x, r.p4->y);
+    printf("Pole: %d\n", rectangle_area(r));
+    printf("Obwod: %d\n", rectangle_circuit(r));
 
     return 0;
 }
