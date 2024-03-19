@@ -1,2 +1,2 @@
-# Zadania_1
+# Zadania_C
 Programowanie w języku C
