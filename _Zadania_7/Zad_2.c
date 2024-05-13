@@ -81,7 +81,7 @@ int main() {
     int sumaIndeksow = 0;
     int sumaMocy = 0;
 
-    file = fopen("input.txt", "r");
+    file = fopen("input2.txt", "r");
 
     if (file == NULL) {
         printf("Nie można otworzyć pliku!!!");
