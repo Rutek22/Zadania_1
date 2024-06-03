@@ -1,0 +1,18 @@
+# ninja log v5
+43	1272	7391495344765560	CMakeFiles/Projekt_koncowy.dir/rook.cpp.obj	4bc1e84d8a6c5d00
+47	1303	7391495344926774	CMakeFiles/Projekt_koncowy.dir/bishop.cpp.obj	2008d03d8f3e05d5
+1328	2255	7391495354721439	CMakeFiles/Projekt_koncowy.dir/king.cpp.obj	371f2df718e8c038
+1274	2205	7391495354216778	CMakeFiles/Projekt_koncowy.dir/knight.cpp.obj	ccfa692d47a91937
+0	1327	7391495345015479	CMakeFiles/Projekt_koncowy.dir/main.cpp.obj	ded3e17d992c72b1
+1	260	7391495934750111	build.ninja	dadc6c640dd6c9c7
+50	1442	7391495949841733	CMakeFiles/Projekt_koncowy.dir/board.cpp.obj	47f0f25186305333
+62	1203	7391497725871747	CMakeFiles/Projekt_koncowy.dir/restrictedPiece.cpp.obj	56ccdd7b63a6ecb6
+56	1145	7391507809259218	CMakeFiles/Projekt_koncowy.dir/pawn.cpp.obj	8c54c0a551b187e3
+62	1151	7391507809289144	CMakeFiles/Projekt_koncowy.dir/queen.cpp.obj	76587f1f711e720
+6	1337	7391507811281760	CMakeFiles/Projekt_koncowy.dir/game.cpp.obj	fae34c81e813063d
+1146	1687	7391507814775062	CMakeFiles/Projekt_koncowy.dir/piece.cpp.obj	1f1117046d44cbfd
+1151	1798	7391507815869883	CMakeFiles/Projekt_koncowy.dir/player.cpp.obj	cb38dc4d1d9af320
+1338	1813	7391507816033386	CMakeFiles/Projekt_koncowy.dir/square.cpp.obj	c5b65f8f0db8295e
+1813	2174	7391507819619711	Projekt_koncowy.exe	ffdd7ee5c08ed1bf
+7	1124	7391536345635021	CMakeFiles/Projekt_koncowy.dir/game.cpp.obj	fae34c81e813063d
+1125	1416	7391536348556017	Projekt_koncowy.exe	ffdd7ee5c08ed1bf
