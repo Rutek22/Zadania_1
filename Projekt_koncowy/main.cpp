@@ -26,7 +26,7 @@ int main() {
         // Pętla, która ponawia próbę dopóki gracz nie wykona prawidłowego ruchu
         while (!currentPlayer->makeMove()) {
             // Komunikat o nieprawidłowym ruchu
-            cerr << "Nieprawidłowy ruch... Spróbuj ponownie" << endl;
+            cerr << "Nieprawidłowy ruch... Sprobuj ponownie" << endl;
         }
 
         // Wyświetlenie stanu planszy po wykonanym ruchu
