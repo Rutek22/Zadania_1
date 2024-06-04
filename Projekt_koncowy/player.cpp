@@ -59,7 +59,7 @@ bool Player::makeMove()
                                         tolower(fromSquare.at(1)) - Y_MIN)->occupied())
             )
     {
-        cerr << "Niepoprawny ruch. Spróbuj ponownie." << endl;
+        cerr << "Niepoprawny ruch. Sprobuj ponownie." << endl;
         cin.clear();
         getline(cin, badInput); // Usunięcie nieprawidłowego wejścia z bufora
         cout << _name << " podaj ruch (np. a2 a4): ";
